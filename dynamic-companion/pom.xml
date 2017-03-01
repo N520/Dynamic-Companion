@@ -48,7 +48,7 @@
 								<goal>copy-resources</goal>
 							</goals>
 							<configuration>
-								<outputDirectory>${dc.deploy.dir}</outputDirectory>
+								<outputDirectory>${osgi.deploy.dir}</outputDirectory>
 								<resources>
 									<resource>
 										<directory>${project.build.directory}</directory>
