@@ -47,9 +47,9 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>swt6</groupId>
-			<artifactId>paint-osgi-shape</artifactId>
-			<version>1.0</version>
+			<groupId>swt6.dc</groupId>
+			<artifactId>dynamic-companion-panel</artifactId>
+			<version>1.0.0.0</version>
 			<type>bundle</type>
 		</dependency>
 	</dependencies>
