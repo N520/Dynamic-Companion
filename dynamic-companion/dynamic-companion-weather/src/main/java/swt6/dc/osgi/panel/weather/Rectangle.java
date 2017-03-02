@@ -1,10 +1,10 @@
-package swt6.osgi.shape.rectangle;
+package swt6.dc.osgi.panel.weather;
 
 import javafx.geometry.Rectangle2D;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
-import swt6.osgi.shape.AbstractShape;
-import swt6.osgi.shape.ShapeFactory;
+import swt6.dc.osgi.panel.AbstractShape;
+import swt6.dc.osgi.panel.ShapeFactory;
 
 public class Rectangle extends AbstractShape {
 

@@ -1,8 +1,8 @@
-package swt6.osgi.shape.rectangle;
+package swt6.dc.osgi.panel.weather;
 
 import javafx.scene.image.Image;
-import swt6.osgi.shape.Shape;
-import swt6.osgi.shape.ShapeFactory;
+import swt6.dc.osgi.panel.Shape;
+import swt6.dc.osgi.panel.ShapeFactory;
 
 public class RectangleFactory implements ShapeFactory {
 

@@ -1,9 +1,9 @@
-package swt6.osgi.shape.rectangle;
+package swt6.dc.osgi.panel.weather;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
-import swt6.osgi.shape.ShapeFactory;
+import swt6.dc.osgi.panel.ShapeFactory;
 
 public class RectangleActivator implements BundleActivator {
 

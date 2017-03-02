@@ -24,7 +24,7 @@
 				<configuration>
 					<instructions>
 						<Export-Package>
-							swt6.osgi.shape;version="1.0"
+							swt6.dc.osgi.panel;version="1.0"
 						</Export-Package>
 						<Import-Package>
 							javafx.*

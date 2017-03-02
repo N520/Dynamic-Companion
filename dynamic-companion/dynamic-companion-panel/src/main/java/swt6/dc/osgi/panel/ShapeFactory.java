@@ -1,4 +1,4 @@
-package swt6.osgi.shape;
+package swt6.dc.osgi.panel;
 
 import javafx.scene.image.Image;
 

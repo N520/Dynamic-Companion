@@ -1,4 +1,4 @@
-package swt6.osgi.paint;
+package swt6.dc.osgi.main;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -21,8 +21,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-import swt6.osgi.shape.Shape;
-import swt6.osgi.shape.ShapeFactory;
+import swt6.dc.osgi.panel.Shape;
+import swt6.dc.osgi.panel.ShapeFactory;
 import swt6.util.JavaFxUtils;
 
 public class PaintWindow {

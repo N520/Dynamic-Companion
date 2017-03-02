@@ -1,10 +1,10 @@
-package swt6.osgi.paint;
+package swt6.dc.osgi.main;
 
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 import org.osgi.util.tracker.ServiceTrackerCustomizer;
 
-import swt6.osgi.shape.ShapeFactory;
+import swt6.dc.osgi.panel.ShapeFactory;
 
 public class ShapeTrackerCustomizer implements ServiceTrackerCustomizer<ShapeFactory, ShapeFactory> {
 

@@ -1,4 +1,4 @@
-package swt6.osgi.paint;
+package swt6.dc.osgi.main;
 
 import java.util.logging.LogManager;
 
@@ -8,7 +8,7 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.BundleException;
 import org.osgi.util.tracker.ServiceTracker;
 
-import swt6.osgi.shape.ShapeFactory;
+import swt6.dc.osgi.panel.ShapeFactory;
 //import swt6.osgi.shape.rectangle.RectangleFactory; v1 requires import
 import swt6.util.JavaFxUtils;
 
