@@ -10,6 +10,7 @@ import javafx.scene.control.ToolBar;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import swt6.dc.osgi.panel.PanelFactory;
@@ -27,6 +28,8 @@ public class ContainerWindow {
 			JavaFxUtils.runAndWait(() -> {
 				toolBar = new ToolBar();
 				flowPane = new FlowPane();
+				flowPane.setVgap(20);
+				flowPane.setHgap(20);
 				rootPane = new VBox(toolBar, flowPane);
 			});
 		} catch (InterruptedException | ExecutionException e) {
@@ -40,9 +43,9 @@ public class ContainerWindow {
 			JavaFxUtils.runAndWait(() -> {
 				if (stage == null) {
 					stage = new Stage();
-					stage.setScene(new Scene(rootPane, 500, 500));
-					stage.setMinWidth(250);
-					stage.setMinHeight(250);
+					stage.setScene(new Scene(rootPane, 250, 250));
+					stage.setMinWidth(100);
+					stage.setMinHeight(100);
 					stage.setTitle("Dynamic Companion");
 				}
 				stage.show();
@@ -108,6 +111,18 @@ public class ContainerWindow {
 				//
 				// remove toolbar item for shape factory.
 				toolBar.getItems().remove(getToolBarButtonByName(pf.getPanelType()));
+
+				Node nodeToRemove = null;
+
+				for (Node p : flowPane.getChildren()) {
+					if (p.getId() != null && p.getId().equals(pf.getPanelType())) {
+						nodeToRemove = p;
+						break;
+					}
+				}
+
+				if (nodeToRemove != null)
+					flowPane.getChildren().remove(nodeToRemove);
 
 				// TODO remove corresponding panel
 

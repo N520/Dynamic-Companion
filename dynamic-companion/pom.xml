@@ -24,6 +24,7 @@
 		<module>dynamic-companion-main</module>
 		<module>dynamic-companion-panel</module>
 		<module>dynamic-companion-weather</module>
+		<module>dynamic-companion-traffic</module>
 	</modules>
 
 

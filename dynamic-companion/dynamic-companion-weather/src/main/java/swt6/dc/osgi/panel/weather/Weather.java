@@ -1,9 +1,6 @@
 package swt6.dc.osgi.panel.weather;
 
 import javafx.scene.control.Label;
-import javafx.scene.layout.Border;
-import javafx.scene.layout.BorderStroke;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
@@ -18,11 +15,13 @@ public class Weather extends AbstractPanel {
 		super(factory);
 		content = "Some weather content";
 		weatherPane = new VBox();
+		Text t = new Text(content);
+		t.maxWidth(100);
 		weatherPane.getChildren().add(new Label("TownName"));
-		weatherPane.getChildren().add(new Text(content));
+		weatherPane.getChildren().add(t);
 		weatherPane.setMaxSize(100, 100);
 		weatherPane.setStyle("-fx-border-style: solid; " + "-fx-boder-width: 2;");
-
+		weatherPane.setId(getPanelType());
 	}
 
 	@Override
