@@ -82,7 +82,8 @@ public class ContainerWindow {
 				// setCurrentShapeFactory(sf);
 
 				// TODO create panel from factory and append it to parent
-				flowPane.getChildren().add(pf.createPanel().getPane());
+				Pane pane = pf.createPanel().getPane();
+				flowPane.getChildren().add(pane);
 
 				// add toolbar button
 				ToggleButton button = new ToggleButton(pf.getPanelType());
@@ -90,6 +91,13 @@ public class ContainerWindow {
 				button.setGraphic(new ImageView(pf.getPanelIcon()));
 				button.setUserData(pf.getPanelType());
 				// button.setOnAction(evt -> toolbarButtonPressed(evt));
+				button.setSelected(true);
+				button.setOnMouseClicked((e) -> {
+					if (!button.isSelected())
+					flowPane.getChildren().remove(pane);
+					else
+						flowPane.getChildren().add(pane);
+				});
 				toolBar.getItems().add(button);
 			});
 		} catch (InterruptedException | ExecutionException e) {

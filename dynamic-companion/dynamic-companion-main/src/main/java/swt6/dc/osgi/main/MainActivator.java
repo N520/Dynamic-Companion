@@ -1,10 +1,15 @@
 package swt6.dc.osgi.main;
 
+import java.util.Dictionary;
+import java.util.Hashtable;
 import java.util.logging.LogManager;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
+import org.osgi.service.event.Event;
+import org.osgi.service.event.EventConstants;
+import org.osgi.service.event.EventHandler;
 import org.osgi.service.log.LogService;
 import org.osgi.util.tracker.ServiceTracker;
 
@@ -37,6 +42,22 @@ public class MainActivator implements BundleActivator {
 		if (logService != null)
 			logService.log(LogService.LOG_INFO, "Yee ha, I'm logging!");
 
+		String[] topics = new String[] { EventConstants.EVENT_TOPIC, "dc/*" };
+
+		Dictionary<String, Object> ht = new Hashtable<String, Object>();
+		ht.put(EventConstants.EVENT_TOPIC, topics);
+
+		// hier registrieren wir einen entsprechenden EventHandler
+		ctx.registerService(EventHandler.class.getName(), new EventHandler() {
+			@Override
+			public void handleEvent(Event event) {
+				if (logService != null) {
+					logService.log(LogService.LOG_INFO, "handle Event " + event);
+				}
+
+			}
+		}, ht);
+
 	}
 
 	private void startUI(BundleContext arg0) {
@@ -51,7 +72,7 @@ public class MainActivator implements BundleActivator {
 
 		ServiceReference<LogService> logRef = ctx.getServiceReference(LogService.class);
 		LogService logservice = ctx.getService(logRef);
-		
+
 		if (logservice != null)
 			logservice.log(LogService.LOG_INFO, "Shuting down");
 
