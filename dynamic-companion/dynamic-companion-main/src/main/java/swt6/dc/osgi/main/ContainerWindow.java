@@ -4,17 +4,14 @@ import java.util.concurrent.ExecutionException;
 
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToolBar;
 import javafx.scene.control.Tooltip;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import swt6.dc.osgi.panel.PanelFactory;
-import swt6.dc.osgi.panel.ShapeFactory;
 import swt6.util.JavaFxUtils;
 
 public class ContainerWindow {
@@ -88,7 +85,6 @@ public class ContainerWindow {
 				// add toolbar button
 				ToggleButton button = new ToggleButton(pf.getPanelType());
 				button.setTooltip(new Tooltip(pf.getPanelType()));
-				button.setGraphic(new ImageView(pf.getPanelIcon()));
 				button.setUserData(pf.getPanelType());
 				// button.setOnAction(evt -> toolbarButtonPressed(evt));
 				button.setSelected(true);

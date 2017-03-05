@@ -9,7 +9,7 @@ public class WeatherFactory implements PanelFactory {
 	private Image icon;
 
 	public WeatherFactory() {
-//		icon = new Image(this.getClass().getResourceAsStream("rectangle.png"));
+		icon = new Image(this.getClass().getResourceAsStream("sunny.jpg"));
 	}
 
 	@Override

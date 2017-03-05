@@ -5,7 +5,6 @@ import org.osgi.framework.ServiceReference;
 import org.osgi.util.tracker.ServiceTrackerCustomizer;
 
 import swt6.dc.osgi.panel.PanelFactory;
-import swt6.dc.osgi.panel.ShapeFactory;
 
 public class PanelTrackerCustomizer implements ServiceTrackerCustomizer<PanelFactory, PanelFactory> {
 

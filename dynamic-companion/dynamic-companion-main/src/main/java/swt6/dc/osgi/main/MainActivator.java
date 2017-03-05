@@ -14,7 +14,6 @@ import org.osgi.service.log.LogService;
 import org.osgi.util.tracker.ServiceTracker;
 
 import swt6.dc.osgi.panel.PanelFactory;
-//import swt6.osgi.shape.rectangle.RectangleFactory; v1 requires import
 import swt6.util.JavaFxUtils;
 
 public class MainActivator implements BundleActivator {
@@ -47,7 +46,6 @@ public class MainActivator implements BundleActivator {
 		Dictionary<String, Object> ht = new Hashtable<String, Object>();
 		ht.put(EventConstants.EVENT_TOPIC, topics);
 
-		// hier registrieren wir einen entsprechenden EventHandler
 		ctx.registerService(EventHandler.class.getName(), new EventHandler() {
 			@Override
 			public void handleEvent(Event event) {
